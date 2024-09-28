@@ -54,7 +54,7 @@ public class Customer {
                 "Id_Customer=" + Id_Customer +
                 ", Name='" + Name + '\'' +
                 ", gender=" + gender +
-                ", discount=" + discount +  // Include discount in toString
+                ", discount=" + discount + 
                 '}';
     }
 }
