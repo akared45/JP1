@@ -15,8 +15,8 @@ public class StaffController {
     }
     public Optional<Staff> filterFemaleStaffWithMaxPay() {
         return staffs.stream()
-                .filter(staff -> staff.getGender() == Gender.Female)  // Filter by gender
-                .max(Comparator.comparingDouble(Staff::getPay));      // Find the staff with the maximum pay
+                .filter(staff -> staff.getGender() == Gender.Female)  
+                .max(Comparator.comparingDouble(Staff::getPay));     
     }
     public static List<Staff> getByName(String Keyword) {
         return staffs.stream()
