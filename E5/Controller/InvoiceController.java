@@ -23,9 +23,10 @@ public class InvoiceController {
                 .filter(invoice -> invoice.getDate().getMonth()== Month.AUGUST)
                 .toList();
 
-        for (Invoice invoice : discountedInvoices) {
+         for (Invoice invoice : discountedInvoices) {
             double amountDiscountNotAugust = invoice.amountAfterDiscount();
-            double discountAmount = amountDiscountNotAugust * 0.10;
+            double amount=invoice.getAmount();
+            double discountAmount = amount-(amount * 0.10+amountDiscountNotAugust);
             invoice.setAmount(amountDiscountNotAugust - discountAmount);
         }
         return discountedInvoices;
