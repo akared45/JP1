@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public class StaffController {
     private static List<Staff> staffs;
-    // Constructor to initialize the staff list
+
     public StaffController(List<Staff> staffs) {
         StaffController.staffs = staffs;
     }
